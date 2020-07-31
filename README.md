@@ -9,15 +9,52 @@ There are 2 methods to use this tool. A little bit of command line knowledge wil
 
 ### Method 1: Using the package installer version
 Download the latest release and unpack it. Double click the installer and follow the steps to install it. After install, open Terminal and enter ``/Applications/AHTFinder/AHTFinder.sh``
+
 Now, use the tool however you want.
 
 ### Method 2: no-install method
 Download the latest release, unzip it and open Terminal. Navigate to the directory of AHTFinder.sh (Make sure ``osx-cpu-temp`` and ``AHTFinder.sh`` are in the same folder)
 Next, run AHTFinder.sh with ``./AHTFinder.sh``
+
 Now, use the tool however you want.
 
 ## Creating a bootable USB drive for AHT
-Will be added soon
+#### Step 0: Download the right version of the AHT image
+#### Step 1: Prepare a USB Drive
+Choose a USB drive with at least 512mb (recommended).
+
+**Warning: During the following process all data on this drive will be erased! If you need the data on it, make a backup first.**
+
+*I will not be liable for any loss of data*
+
+Use Disk Utility to erase the usb drive. Make sure to format it as `Mac OS Journaled` with the `GUID Partition Table`
+#### Step 2: Prepare the image
+Take your .dmg file and double-click it to mount it.
+#### Step 3: Copying the image to the USB Drive
+Let's assume your usb drive is called 'Untitled'. This means that the mount point is `/Volumes/Untitled`. But this might differ. If you are unsure, unmount and disconnect all other storage drives except for your diagnostics drive. The mount point would be `/Volumes/{YourDrive}`.
+
+Let's assume your .dmg file is mounted in ``/Volumes/AHT`` (Your image would be mounted in `/Volumes/{yourDMG}`)
+
+Open Terminal and type the following command:
+
+```sh
+cp -r /Volumes/{yourDMG}/System /Volumes/{YourDrive}
+```
+This copies the system folder of the image to the usb drive. Fill in the parts between '{}' for your usecase. (don't just copy/paste this line)
+
+#### Step 4: Make everything bootable
+To make the USB drive bootable, enter the following command
+```sh
+sudo bless --folder /Volumes/{YourDrive}/ --file /Volumes/{YourDrive}/System/Library/CoreServices/.diagnostics/diags.efi --label AHT
+```
+You might need to enter your password to authenticate.
+
+After this, you can safely close all windows. Eject the USB drive and plug it in the computer you want to test.
+
+#### Step 5: Starting the diagnostics
+Shut down the computer to test, press the power button and immediately hold down the `ALT/Option` key. When you see a boot menu, select the drive that is either called `AHT` or `EFI USB` (or something similar).
+
+You have now succesfully started the diagnostic tool. Congratulations!
 
 ## Download codes in the script
 
