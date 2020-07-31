@@ -1,5 +1,5 @@
 # Known issues in version 1.1
-No issues yet...
+- CPU Temp meter working intermittently
 
 # Known issues in version 1.0
 - [FIXED] CPU Temp script not found
