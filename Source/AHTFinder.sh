@@ -12,7 +12,7 @@ boardID=$( ioreg -l | awk -F\" '/board-id/ { print $4 }' )
 baseURL='http://download.info.apple.com/Apple_Hardware_Test'
 selfDir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 cpuTemp=$( ${selfDir}/osx-cpu-temp )
-ver="Version: 01.01"
+ver="Version: 01.20"
 
 printInfo () {
 	printf -- '%s\n' "Current CPU temp:        ${cpuTemp}" \
@@ -91,10 +91,11 @@ parseMultiCodes () {
     printf -- '%s\n' "${baseURL}/${code}.dmg"
   done
   echo
-  echo "Click while holding CTRL to open the link."
+  echo "Click while holding [CTRL] to open the link."
 }
 
-mainCheckPart2 () {
+# The main check and comparison
+mainCheck () {
 writeHeader
 case "$hwModel" in
 	(iMac4,1)
@@ -592,21 +593,6 @@ case "$hwModel" in
   esac
 }
 
-# The main check and comparison
-mainCheck () {
-writeHeader
-printInfo
-echo
-while true; do
-	read -rp "Would you like to determine the AHT download link? " yn
-	case $yn in
-		([Yy]*) mainCheckPart2; break;;
-		([Nn]*) leaveScript 0;;
-		(*) echo "Please enter Y or N"
-	esac
-done
-}
-
 #Just show HW model and BoardID
 justInfo () {
 writeHeader
@@ -634,6 +620,13 @@ echo
 echo "Done :]"
 leaveScript
 }
+
+
+#if [[ "${selfDir}" == *"Applications"* ]]; then
+#	cpuTemp=$( ${selfDir}/osx-cpu-temp )
+#else
+#	cpuTemp=$( ./osx-cpu-temp )
+#fi
 
 writeHeader
 echo "Please Read!"
