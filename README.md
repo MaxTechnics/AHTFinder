@@ -180,3 +180,5 @@ If you do end up using this, please also open an issue mentioning your test resu
 - All download codes were originally found by upekkha and put in [this](https://github.com/upekkha/AppleHardwareTest) repository. Credits go to [upekkha](https://github.com/upekkha/)!
 
 - An old version of Xcode was used to write this. It is not recommended!
+
+- [osx-cpu-temp by lavoiesl](https://github.com/lavoiesl/osx-cpu-temp)
