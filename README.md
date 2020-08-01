@@ -98,7 +98,7 @@ You have now succesfully started the diagnostic tool. Congratulations!
 | Macmini2,1     | Mac-F4208EAA              | 018-3254-A    | Yes     | Yes        | No                  |
 | Macmini3,1     | Mac-F22C86C8              | 022-4292-A    | No      | Yes        | No                  |
 | Macmini4,1     | Mac-F2208EC8 (NOT SERVER) | 022-4706-A    | No      | Yes        | No                  |
-| Macmini4,1     | Mac-F2208EC8 (SERVER)     | 022-4739-A    | No      | Yes        | No                  |
+| Macmini4,1     | Mac-F2208EC8 (SERVER)     | 022-4739-A    | No      | Yes        | Yes                 |
 | Macmini5,1     | Mac-8ED6AF5B48C039E1      | 022-5207-A    | No      | Yes        | No                  |
 | Macmini5,2     | Mac-4BC72D62AD45599E      | 022-5207-A    | No      | Yes        | No                  |
 | Macmini6,1     | Mac-031AEE4D24BFF0B1      | 022-6031-A    | Yes     | Yes        | No                  |
@@ -132,7 +132,7 @@ You have now succesfully started the diagnostic tool. Congratulations!
 | MacBookPro1,1  | 3A106                     | 018-2398-A    | No      | Yes        | No                  |
 | MacBookPro1,1  | 3A107                     | 018-2405-A    | No      | Yes        | No                  |
 | MacBookPro2,1  | Mac-F42189C8              | 018-2592-A    | No      | Yes        | No                  |
-| MacBookPro2,2  | Mac-F42187C8              | 018-2591-A    | No      | Yes        | No                  |
+| MacBookPro2,2  | Mac-F42187C8              | 018-2591-A    | No      | Yes        | Testing             |
 | MacBookPro3,1  | Mac-F42388C8              | 018-2833-A    | No      | Yes        | No                  |
 | MacBookPro3,1  | Mac-F42388C8              | 018-3169-A    | Yes     | Yes        | No                  |
 | MacBookPro3,1  | Mac-F42388C8              | 018-3254-A    | Yes     | Yes        | No                  |
