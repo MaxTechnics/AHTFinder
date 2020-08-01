@@ -4,6 +4,9 @@ This bash script checks the Hardware Model, Board ID and returns the download li
 ## About Apple Hardware Test
 Apple Hardware Test (AHT) was an often built in diagnostic tool used to detect problems with your Mac system. Apple changed to another Diagnostic system starting with Macs released in June 2013. This means that the script will not find a download for newer Macs as they do not support AHT. This is a great tool however to find the right link for your older Mac.
 
+## Servers
+Some Mac models have a server version. Please contribute if you have a server by testing all download codes you get presented and mentioning which ones do and don't work so the script can be updated accordingly. Eg. The Mac mini 4,1 has both a server and a non-server model. But they have different versions of AHT. I will personally test as many models of Mac as possible, but i don't have access to most server models. Any help would be appreciated!
+
 ## Using this tool
 There are 2 methods to use this tool. A little bit of command line knowledge will be handy though.
 
@@ -58,6 +61,11 @@ You have now succesfully started the diagnostic tool. Congratulations!
 
 ### Converting legacy images
 Open Disk Utility and click on the Convert button. Select the image, rename it (add something like 'converted') and click on save. Now continue the process with the newly converted image
+
+## Contributing
+Please notify me by opening an issue if you find something that's wrong. Is the wrong model shown? Is a link not/no longer working? Please report it. Be sure to mention the Hardware Model and Board ID and if the wrong one is mentioned also what the wrong model is. This way, fixing bugs is much easier.
+
+If you do end up using this, please also open an issue mentioning your test results so i can update the tested and verified column. Open an issue with title: verification or something like that, mention the used download code, Board ID and Hardware Model. Thank you in advance!
 
 ## Download codes in the script
 
@@ -211,10 +219,6 @@ Open Disk Utility and click on the Convert button. Select the image, rename it (
 #### Unknown Download Codes
 * [unidentified](018-2393-A), possibly [MacBook1,1 Mac-F4208CC8]
 
-## Contributing
-Please notify me by opening an issue if you find something that's wrong. Is the wrong model shown? Is a link not/no longer working? Please report it. Be sure to mention the Hardware Model and Board ID and if the wrong one is mentioned also what the wrong model is. This way, fixing bugs is much easier.
-
-If you do end up using this, please also open an issue mentioning your test results so i can update the tested and verified column. Open an issue with title: verification or something like that, mention the used download code, Board ID and Hardware Model. Thank you in advance!
 
 ## Used tools, libraries and repos
 - All download codes were originally found by upekkha and put in [this](https://github.com/upekkha/AppleHardwareTest) repository. Credits go to [upekkha](https://github.com/upekkha/)!
