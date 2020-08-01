@@ -29,7 +29,7 @@ Choose a USB drive with at least 512mb (recommended).
 
 Use Disk Utility to erase the usb drive. Make sure to format it as `Mac OS Journaled` with the `GUID Partition Table`
 #### Step 2: Prepare the image
-Take your .dmg file and double-click it to mount it.
+Take your .dmg file and double-click it to mount it. If you have an older Mac, you might get a message saying that this 'legacy image should be converted'. If so, check a little lower for a guide.
 #### Step 3: Copying the image to the USB Drive
 Let's assume your usb drive is called 'Untitled'. This means that the mount point is `/Volumes/Untitled`. But this might differ. If you are unsure, unmount and disconnect all other storage drives except for your diagnostics drive. The mount point would be `/Volumes/{YourDrive}`.
 
@@ -52,9 +52,12 @@ You might need to enter your password to authenticate.
 After this, you can safely close all windows. Eject the USB drive and plug it in the computer you want to test.
 
 #### Step 5: Starting the diagnostics
-Shut down the computer to test, press the power button and immediately hold down the `ALT/Option` key. When you see a boot menu, select the drive that is either called `AHT` or `EFI USB` (or something similar).
+Shut down the computer to test, press the power button and immediately hold down the `ALT/Option` key. When you see a boot menu, select the drive that is either called `AHT` or `EFI Boot` (or something similar).
 
 You have now succesfully started the diagnostic tool. Congratulations!
+
+### Converting legacy images
+Open Disk Utility and click on the Convert button. Select the image, rename it (add something like 'converted') and click on save. Now continue the process with the newly converted image
 
 ## Download codes in the script
 
