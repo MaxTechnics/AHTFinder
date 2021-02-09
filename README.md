@@ -226,3 +226,8 @@ If you do end up using this, please also open an issue mentioning your test resu
 - An old version of Xcode was used to write this. It is not recommended!
 
 - [osx-cpu-temp by lavoiesl](https://github.com/lavoiesl/osx-cpu-temp)
+
+## Like it?
+Consider supporting me:
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/A0A33KOGW)
